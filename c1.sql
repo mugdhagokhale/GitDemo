@@ -1,0 +1,6416 @@
+/****************************************************************************************************************/
+/*          Create the million cuts  */
+/****************************************************************************************************************/
+
+DROP TABLE NTL_PRD_QMTBLS.AUTO_MILLION_CUTS;
+.LABEL NOTABLETODROP9
+
+CREATE TABLE NTL_PRD_QMTBLS.AUTO_MILLION_CUTS AS 
+(
+SELECT      Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_gen AS VARCHAR(53333AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(byod AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(byod AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(byod AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(byod AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(byod AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(byod AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Device product name' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(ltv AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Operating system' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(os AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('State Code' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(stws AS VARCHAR(50)) AS VALUE1
+,           Cast('State Code' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('State Code' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(stws AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('State Code' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(stws AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Outanding balance / Past Due account (Y/N) ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(outstanding_bal_ind AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line ' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_category AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan changes in the past 12 months' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(pplan_changes AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('State Code' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(state_cd AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Serving Those Who Serve; teachers, military, nurses' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(stws AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Total basic voice lines on account' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(total_basic_lines_on_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('Total voice lines on account' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(total_voice_lines_on_acct AS VARCHAR(50)) AS VALUE1
+,           Cast('Total smartphone voice lines on account' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(total_smartphone_lines_on_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('All' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(_all_ AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('AAL (Add A Line) Decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(aal_v AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('3mth average domestic data overage' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_data_ovg AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation account owner was born in' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_gen AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Age of customer' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_hldr_age AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Account Margin' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(acct_margin_grp AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('BYOD (Y/N)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(byod AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Census Metropolitan Area (CMA) tier' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cma_mkt_tier AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('In Contract / OOC with time remaining' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(cntrct_mth AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Data allowance per billing cycle' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_allowance AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by line in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Amount of data used by account in GB' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(data_usage_acct AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Device product name' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dev_nm AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Generation of current device (CDMA /4G / 5G)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(device_generation AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Number of days since line called customer care' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(dys_since_care AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('In market risk decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(im_mth_risk AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per account (ARPA)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpa AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Last cycle acount revenue per user (ARPU)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(last_cycle_arpu AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Price plan on line' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_plan_type AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Line tenure (months)' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(line_tenure_mths AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Lifetime value model decile' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(ltv AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+GROUP BY    1, 2, 3, 4 UNION ALL
+
+SELECT      Cast('VBM value in $' AS VARCHAR(50)) AS SEGMENT1
+,           Cast(vbm_value AS VARCHAR(50)) AS VALUE1
+,           Cast('Operating system' AS VARCHAR(50)) AS SEGMENT2
+,           Cast(os AS VARCHAR(50)) AS VALUE2
+,           Sum(PRE_OFFR_CVD) AS PRE_OFFR_CVD
+,           Sum(CURR_OFFR_CVD) AS CURR_OFFR_CVD
+,           Sum(LINES) AS TOTAL_LINES
+,           Sum(PRE_OFFR_CVD)* 100.00/Sum(LINES) AS PRE_PCT_LINES_CVD
+,           Sum(CURR_OFFR_CVD)*100.00/Sum(LINES) AS CURR_PCT_LINES_CVD
+,           Sum(CHURN_BENEFIT) AS TOTAL_CHURN_BENEFIT
+,           10000.00000 * TOTAL_CHURN_BENEFIT / TOTAL_LINES AS CHURN_BENEFIT_BPS
+FROM        NTL_PRD_QMTMPTBLS.AUTO_WIDE
+
+)
+WITH DATA PRIMARY INDEX (SEGMENT1, VALUE1, SEGMENT2, VALUE2)
+;
+.IF Errorcode <> 0 THEN .GOTO Abort_Failed;
+
+--COLLECT STATISTICS ON NTL_PRD_QMTBLS.AUTO_MILLION_CUTS COLUMN (segment1, value1, segment2, value2);
+.IF Errorcode <> 0 THEN .GOTO Abort_Failed;
+
+--GRANT ALL PRIVILEGES ON NTL_PRD_QMTBLS.AUTO_MILLION_CUTS TO WILAM2V, BRENPH8, HASNAAM, /*DAREKSH,*/ BRENPH8, VVI3FRV, LVI36U7, UMKTNTLDBRP WITH GRANT OPTION;
+.IF Errorcode <> 0 THEN .GOTO Abort_Failed;
